@@ -102,46 +102,80 @@ header > .container-logo {
     justify-content: center;
     align-items: center;
 }*/
+/* Contenedor del logo en el header */
 header > .container-logo {
-    width: 100%;
-    height: 20%;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
+    width: 100%; /* El logo ocupa todo el ancho disponible */
+    height: 20%; /* 20% de la altura disponible */
+    display: flex; /* Flexbox para organizar el contenido */
+    justify-content: center; /* Centra el logo horizontalmente */
+    align-items: flex-end; /* Alinea el logo en la parte inferior */
+    padding-bottom: 10px; /* Añade un poco de espacio inferior */
+    transition: transform 0.3s ease-in-out; /* Transición para efectos dinámicos */
 }
 
+/* Imagen del logo dentro del contenedor */
 .container-logo > img {
-    width: 9.2rem;
-    height: 3.6rem;
+    width: 9.2rem; /* Ancho fijo para el logo */
+    height: 3.6rem; /* Altura fija para el logo */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Efectos de transición para el logo */
 }
+
+/* Efecto hover para la imagen del logo */
+.container-logo > img:hover {
+    transform: scale(1.1); /* Aumenta ligeramente el tamaño al pasar el ratón */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Añade una sombra para resaltar el logo */
+}
+
+/* Contenedor de las redes sociales en el footer */
 footer > navar-social-networks {
-    width: 100%;
-    }
-
-.navar-social-networks > ul { 
-    width: 100%;
-    display: flex;
-    justify-content: center;
+    width: 100%; /* Ancho completo */
+    display: flex; /* Organización flexible */
+    justify-content: center; /* Centra horizontalmente */
+    padding-top: 10px; /* Añade espacio superior */
 }
 
-.navar-social-networks > ul > li{
-    list-style: none;
+/* Lista de redes sociales dentro del contenedor */
+.navar-social-networks > ul {
+    width: 100%; /* Ancho completo */
+    display: flex; /* Organización flexible */
+    justify-content: center; /* Centra horizontalmente los elementos */
 }
+
+/* Elimina los marcadores de lista de los ítems */
+.navar-social-networks > ul > li {
+    list-style: none; /* Elimina los puntos de la lista */
+    margin: 0 10px; /* Añade espacio horizontal entre los ítems */
+}
+
+/* Estilos para los íconos de las redes sociales */
 .bx {
-    font-size: 2rem;
-    color: var(--third-color);
-    border-radius: 50%;
-    margin: 0.5rem;
-    background-color: rgb(207, 144, 183); 
+    font-size: 2rem; /* Tamaño grande para los íconos */
+    color: var(--third-color); /* Color principal para los íconos */
+    border-radius: 50%; /* Bordes redondeados */
+    margin: 0.5rem; /* Margen alrededor del ícono */
+    background-color: rgb(207, 144, 183); /* Fondo para destacar el ícono */
+    padding: 10px; /* Espaciado interno para el ícono */
+    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out; /* Efecto de transición para sombra y tamaño */
 }
 
+/* Efecto hover para los íconos */
 .bx:hover {
-    background: none;
-    box-shadow: 0 0 10px var(--first-color);
+    background: none; /* Elimina el fondo al pasar el ratón */
+    box-shadow: 0 0 10px var(--first-color); /* Añade una sombra de color primario */
+    transform: scale(1.1); /* Aumenta ligeramente el tamaño al pasar el ratón */
 }
-img{
-    width: 20px;
-} 
+
+/* Estilos globales para imágenes */
+img {
+    width: 20px; /* Tamaño pequeño para las imágenes genéricas */
+    transition: opacity 0.3s ease; /* Transición suave para la opacidad */
+}
+
+/* Efecto hover para imágenes */
+img:hover {
+    opacity: 0.8; /* Hace la imagen ligeramente transparente al pasar el ratón */
+}
+
 
 /* Contenedor izquierdo que ocupa el 30% de la pantalla */
 body> .left-container {
