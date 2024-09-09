@@ -1,0 +1,91 @@
+/* Contenedor principal del lado derecho */
+body> .rigt-container {
+    width: 70%; /* Ocupa el 70% del ancho total de la pantalla */
+    height: 100%; /* Abarca el 100% de la altura de la ventana */
+    background-color: var(--info-color); /* Fondo con el color informativo definido en :root */
+    display: flex; /* Permite la organización de elementos en fila o columna */
+    flex-direction: column; /* Organiza los elementos en columna */
+    align-items: center; /* Centra los elementos horizontalmente */
+    margin-left: 30%; /* Deja un margen a la izquierda para el contenedor izquierdo */
+    top: 0; /* Asegura que el contenedor esté alineado en la parte superior */
+    padding: 20px; /* Espaciado interno para separar los elementos del borde */
+    overflow-y: auto; /* Permite desplazamiento vertical si el contenido excede la altura */
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1); /* Sombra sutil para un efecto de separación */
+    transition: all 0.3s ease-in-out; /* Transiciones suaves en cambios de estilo */
+}
+
+/* Estilos para un efecto de hover en el contenedor */
+.rigt-container:hover {
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2); /* Aumenta la sombra al pasar el mouse */
+    transform: translateX(-5px); /* Mueve el contenedor ligeramente hacia la izquierda para un efecto interactivo */
+}
+
+/* Estilos de los títulos en las secciones */
+.rigt-container h2 {
+    color: var(--first-color); /* Usa el primer color de la paleta para contraste */
+    font-size: 2rem; /* Tamaño grande para destacar el título */
+    margin-bottom: 10px; /* Espaciado inferior para separar del contenido siguiente */
+    text-align: center; /* Centra el texto en el contenedor */
+    text-transform: uppercase; /* Texto en mayúsculas para mayor impacto */
+}
+
+/* Contenedor de las tarjetas de proyectos */
+.container-cards {
+    display: grid; /* Usa un sistema de cuadrícula para organizar las tarjetas */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Diseño responsivo de tarjetas */
+    gap: 20px; /* Espacio entre las tarjetas */
+    width: 100%; /* Abarca todo el ancho disponible */
+    padding: 20px; /* Espaciado interno */
+}
+
+/* Estilos para las tarjetas individuales */
+.card-projects {
+    background-color: var(--second-color); /* Fondo con el segundo color definido */
+    padding: 15px; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados para un estilo más suave */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para un efecto de elevación */
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Transiciones suaves para efectos de hover */
+}
+
+/* Efecto hover en las tarjetas de proyectos */
+.card-projects:hover {
+    transform: scale(1.05); /* Agranda ligeramente la tarjeta */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Aumenta la sombra para mayor enfoque */
+}
+
+/* Estilo de las imágenes en las tarjetas */
+.card-projects img {
+    width: 100%; /* Imagen cubre todo el ancho de la tarjeta */
+    border-radius: 5px; /* Bordes ligeramente redondeados */
+    margin-bottom: 10px; /* Espaciado inferior para separar del texto */
+}
+
+/* Estilo de los títulos de las tarjetas */
+.card-projects h3 {
+    color: #fff; /* Texto blanco para buen contraste */
+    font-size: 1.5rem; /* Tamaño intermedio */
+    margin-bottom: 10px; /* Espaciado inferior */
+}
+
+/* Estilo de los párrafos dentro de las tarjetas */
+.card-projects p {
+    color: #f0f0f0; /* Color de texto más claro para buena legibilidad */
+    font-size: 1rem; /* Tamaño de texto estándar */
+    line-height: 1.5; /* Mejora la legibilidad con mayor espacio entre líneas */
+}
+
+/* Estilo del botón o enlace dentro de las tarjetas */
+.card-projects a {
+    display: inline-block; /* Hace que el enlace se comporte como un botón */
+    padding: 10px 20px; /* Espaciado interno */
+    background-color: var(--third-color); /* Color de fondo con el tercer color */
+    color: #fff; /* Texto blanco */
+    text-decoration: none; /* Quita el subrayado */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background-color 0.3s ease; /* Transición suave para el color de fondo */
+}
+
+/* Efecto hover en los botones de las tarjetas */
+.card-projects a:hover {
+    background-color: var(--second-color); /* Cambia el color de fondo al segundo color en hover */
+}
