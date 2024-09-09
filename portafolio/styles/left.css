@@ -8,3 +8,119 @@ body> .left-container{
     position: fixed;
     top: 0;
 }
+
+.left-container >header{
+    width: 100%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+header > .container-img-profile{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-img-profile > .img-profile {
+    width: 60%;
+    border-radius: 50%;
+}
+
+header > .container-name-profile {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    color: rgb(43, 115, 148);
+}
+
+.container-name-profile > .name-profile {
+    font-size: 2rem;
+    margin-top: 1rem;
+    border-bottom: #1d1b1b solid 2px;
+}
+
+header > navar-profile {
+    width: 100%;
+    height: 50%;
+}
+
+.navar-profile > ul {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 3rem;
+}
+
+.navar-profile > ul > li {
+    list-style: none;
+}
+.name-profile > ul > li > a {
+    color: blueviolet;
+    text-decoration: none;
+    text-shadow: -2px -2px 4px var(--third-color);
+}
+
+.navar-profile > ul > li > a:hover {
+    text-shadow: -2px -2px 4px var(--second-color);
+    border-bottom: solid 2px #0c0c0a;
+}
+
+header > .container-logo {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.container-logo > img {
+    width: 9.2rem;
+    height: 3.6rem;
+}
+
+.left-container > footer {
+    width: 100%;
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer > navar-social-networks {
+    width: 100%;
+    }
+
+.navar-social-networks > ul { 
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.navar-social-networks > ul > li{
+    list-style: none;
+}
+.bx {
+    font-size: 2rem;
+    color: var(--third-color);
+    border-radius: 50%;
+    margin: 0.5rem;
+    background-color: rgb(207, 144, 183); 
+}
+
+.bx:hover {
+    background: none;
+    box-shadow: 0 0 10px var(--first-color);
+}
+img{
+    width: 20px;
+}
