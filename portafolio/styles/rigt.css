@@ -1,4 +1,4 @@
-.main-container {
+main > .main-container {
     width: 100%; /* Ocupa el 100% del ancho de su contenedor padre */
     height: 100%; /* Asegura que también ocupe el 100% de la altura disponible */
     display: flex; /* Flexbox para organizar contenido interno si es necesario */
@@ -23,8 +23,9 @@ body > .rigt-container {
 
 /* Estilos para un efecto de hover en el contenedor */
 .rigt-container:hover {
-    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2); /* Aumenta la sombra al pasar el mouse */
-    transform: translateX(-5px); /* Mueve el contenedor ligeramente hacia la izquierda para un efecto interactivo */
+    transform: scale(0.95); /* Reduce ligeramente el tamaño simulando presión */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Reduce la sombra para que parezca que el elemento está presionado */
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Transición suave para el efecto */
 }
 
 /* Estilos de los títulos en las secciones */
@@ -55,6 +56,13 @@ body > .rigt-container {
     background-color: var(--info-color); /* Fondo personalizado */
 }
 
+/*estilos para ajustar el parrafo del perfil*/
+.section-profile p {
+    border-radius: 10px;
+    display: inline-flex;
+    align-content: flex-start;
+}
+
 /* Estilos para las secciones de proyectos, referencias, y experiencia */
 .section-projects,
 .section-references,
@@ -71,8 +79,11 @@ body > .rigt-container {
 /* Efecto hover para destacar cada sección */
 .section-projects:hover,
 .section-references:hover,
-.section-experience:hover {
+.section-experience:hover,
+.section-profile:hover {
     background-color: var(--third-color); /* Cambia el fondo al pasar el ratón */
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; /* Cambia el estilo de la fuente*/
+    font: bold; /*Agrega el estilo de negrilla a la fuente*/
 }
 
 /* Estilos específicos para los títulos de las secciones */
@@ -85,7 +96,7 @@ body > .rigt-container {
 /* Tarjetas de proyectos o referencias */
 .container-cards {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Ajusta automáticamente las columnas según el tamaño */
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Ajusta automáticamente las columnas según el tamaño */
     gap: 20px; /* Espacio entre las tarjetas */
 }
 
@@ -98,10 +109,11 @@ body > .rigt-container {
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Transiciones suaves */
 }
 
-/* Efecto hover en las tarjetas */
+/* Efecto hover de presionar en las tarjetas */
 .card-projects:hover {
-    transform: translateY(-5px); /* Desplazamiento hacia arriba */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada al hacer hover */
+    transform: scale(0.95); /* Reduce ligeramente el tamaño simulando presión */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Reduce la sombra para que parezca que el elemento está presionado */
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Transición suave para el efecto */
 }
 
 /* Estilos para las imágenes dentro de las tarjetas */
