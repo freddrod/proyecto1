@@ -1,0 +1,29 @@
+.container-img-profile img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+  }
+
+.container-name-profile h1 {
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.navbar-profile ul {
+    list-style: none;
+    padding: 0;
+}
+
+.navbar-profile li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+}
+
+.navbar-social-networks ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding: 0;
+}

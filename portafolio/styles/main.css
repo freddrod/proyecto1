@@ -1,7 +1,8 @@
-:root {
-    --first-color: #173fad;
-    --second-color: #c7ccdb;
+/* :root {
+    --first-color: #07153d;
+    --second-color: #bc77ce;
     --third-color: #17ada0;
+    --info-color: #d1ebe9;
 }
 
 * {
@@ -13,4 +14,61 @@ body{
     width: 98vw;
     height: auto;
     display: flex;
+} */
+
+:root {
+    --first-color: #07153d; /* Color primario: oscuro y sólido */
+    --second-color: #bc77ce; /* Color secundario: tonalidad morada */
+    --third-color: #17ada0; /* Color terciario: verde agua */
+    --info-color: #d1ebe9; /* Color de fondo: tono claro */
+    --text-color: #ffffff; /* Color de texto general */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Asegura que padding y bordes no alteren el tamaño total de los elementos */
+}
+
+body {
+    width: 98vw; /* Ocupa casi todo el ancho de la ventana */
+    height: auto; /* Ajusta la altura según el contenido */
+    display: flex; /* Organiza el contenido en fila */
+    font-family: 'Arial', sans-serif; /* Establece la fuente para todo el cuerpo */
+    background-color: var(--info-color); /* Fondo claro para todo el cuerpo */
+    color: var(--text-color); /* Color de texto principal */
+    transition: background-color 0.3s ease-in-out; /* Transición suave en el cambio de fondo */
+}
+
+/* Efecto interactivo al cambiar el fondo */
+body:hover {
+    background-color: #e9f7f5; /* Cambia el fondo ligeramente al pasar el mouse */
+}
+
+/* Estilos para los encabezados principales */
+h1, h2, h3 {
+    color: var(--first-color); /* Usa el color primario para los títulos */
+    margin-bottom: 20px; /* Espaciado inferior */
+    text-align: center; /* Centra el texto */
+    text-transform: uppercase; /* Texto en mayúsculas para mayor impacto */
+    font-weight: 700; /* Fuente en negrita */
+}
+
+/* Estilo de los enlaces */
+a {
+    color: var(--third-color); /* Color verde agua para los enlaces */
+    text-decoration: none; /* Elimina subrayado */
+    transition: color 0.3s ease; /* Transición suave en el color */
+}
+
+/* Efecto hover para los enlaces */
+a:hover {
+    color: var(--second-color); /* Cambia a color secundario al pasar el mouse */
+}
+
+/* Mejora para los párrafos */
+p {
+    font-size: 1.1rem; /* Tamaño de fuente un poco mayor para mejorar la legibilidad */
+    line-height: 1.6; /* Espaciado entre líneas para mejor lectura */
+    margin-bottom: 15px; /* Espaciado inferior para separar párrafos */
 }

@@ -1,4 +1,5 @@
-body> .left-container{
+/* body> .left-container{
+
     width: 30%;
     height: 100%;
     background-color: var(--first-color);
@@ -7,4 +8,265 @@ body> .left-container{
     align-items: center;
     position: fixed;
     top: 0;
+}
+
+.left-container >header{
+    width: 100%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+header > .container-img-profile{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-img-profile > .img-profile {
+    width: 40%;
+    border-radius: 50%;
+    margin-top: 8%;
+}
+
+header > .container-name-profile {
+    width: 100%;
+    height: 10%;
+    margin-top: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    color: rgb(43, 115, 148);
+}
+
+.container-name-profile > .name-profile {
+    font-size: 2rem;
+    margin-top: 1rem;
+    border-bottom: #1d1b1b solid 2px;
+}
+
+header > navar-profile {
+    width: 100%;
+    height: 50%;
+}
+
+.navar-profile > ul {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    margin-top: 2%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+.navar-profile > ul > li {
+    list-style: none;
+}
+.name-profile > ul > li > a {
+    color: blueviolet;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 5%;
+    text-shadow: -2px -2px 4px var(--third-color);
+}
+
+.navar-profile > ul > li > a:hover {
+    text-shadow: -2px -2px 4px var(--second-color);
+    border-bottom: solid 2px #0c0c0a;
+}
+
+header > .container-logo {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.container-logo > img {
+    width: 9.2rem;
+    height: 3.6rem;
+}
+
+.left-container > footer {
+    width: 100%;
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}*/
+/* Contenedor izquierdo que ocupa el 30% de la pantalla */
+body > .left-container {
+    width: 30%; /* El contenedor ocupa el 30% del ancho de la pantalla */
+    height: 100vh; /* El contenedor abarca toda la altura de la pantalla */
+    background-color: var(--first-color); /* Fondo con el color primario definido */
+    display: flex; /* Usa Flexbox para organizar los elementos internamente */
+    flex-direction: column; /* Los elementos se organizan en una columna */
+    align-items: center; /* Centra los elementos horizontalmente */
+    position: fixed; /* Fija el contenedor al lado izquierdo de la pantalla */
+    top: 0; /* Alinea el contenedor con el borde superior de la pantalla */
+    padding: 20px; /* Añade un espaciado interno de 20px en todos los lados */
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1); /* Añade sombra al contenedor para crear profundidad */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Añade transiciones suaves para sombras y transformaciones */
+}
+
+/* Efecto hover para el contenedor */
+.left-container:hover {
+    box-shadow: 5px 0 15px rgba(0, 0, 0, 0.3); /* Aumenta la sombra al hacer hover */
+    transform: translateX(5px); /* Mueve el contenedor ligeramente hacia la derecha al hacer hover */
+}
+
+/* Contenedor del logo en el header */
+header > .container-logo {
+    width: 100%; /* El logo ocupa todo el ancho disponible */
+    height: auto; /* La altura se ajusta automáticamente al contenido */
+    display: flex; /* Usa Flexbox para organizar el contenido */
+    justify-content: center; /* Centra el logo horizontalmente */
+    align-items: flex-end; /* Alinea el logo en la parte inferior */
+    padding-bottom: 10px; /* Añade espacio en la parte inferior del logo */
+}
+
+/* Imagen del logo */
+.container-logo > img {
+    width: 9.2rem; /* Define el ancho fijo del logo */
+    height: 3.6rem; /* Define la altura fija del logo */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Transición suave para tamaño y sombra */
+}
+
+/* Efecto hover para la imagen del logo */
+.container-logo > img:hover {
+    transform: scale(1.1); /* Aumenta el tamaño del logo al pasar el ratón */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Añade una sombra para resaltar el logo */
+}
+
+/* Contenedor de la imagen de perfil */
+header > .container-img-profile {
+    width: 100%; /* El contenedor ocupa todo el ancho disponible */
+    height: auto; /* La altura se ajusta al contenido */
+    display: flex; /* Usa Flexbox para centrar la imagen */
+    justify-content: center; /* Centra la imagen horizontalmente */
+    align-items: center; /* Centra la imagen verticalmente */
+    margin-bottom: 20px; /* Añade espacio en la parte inferior del contenedor */
+}
+
+/* Imagen de perfil circular */
+.container-img-profile > .img-profile {
+    width: 40%; /* La imagen ocupa el 40% del ancho del contenedor */
+    border-radius: 50%; /* Hace que la imagen tenga bordes redondeados (forma circular) */
+    margin-top: 8%; /* Añade espacio superior */
+    border: 2px solid var(--second-color); /* Borde alrededor de la imagen con color secundario */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Transición suave para cambios de tamaño y sombra */
+}
+
+/* Efecto hover para la imagen de perfil */
+.img-profile:hover {
+    transform: scale(1.1); /* Aumenta el tamaño de la imagen al hacer hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Añade sombra para resaltar la imagen */
+}
+
+/* Contenedor del nombre de perfil */
+header > .container-name-profile {
+    width: 100%; /* El contenedor ocupa todo el ancho disponible */
+    height: auto; /* La altura se ajusta al contenido */
+    margin-top: 10%; /* Añade espacio superior */
+    display: flex; /* Usa Flexbox para centrar el nombre */
+    justify-content: center; /* Centra el nombre horizontalmente */
+    align-items: flex-start; /* Alinea el nombre en la parte superior */
+}
+
+/* Estilo del nombre de perfil */
+.container-name-profile > .name-profile {
+    font-size: 2rem; /* Tamaño de fuente grande para el nombre */
+    margin-top: 1rem; /* Espaciado superior */
+    border-bottom: 2px solid #1d1b1b; /* Línea inferior del nombre */
+    padding-bottom: 5px; /* Espaciado entre el texto y el borde */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Sombra en el texto para legibilidad */
+    color: var(--text-color); /* Color del texto definido por una variable */
+}
+
+/* Estilo del menú de navegación del perfil */
+header > .navar-profile {
+    width: 100%; /* El contenedor ocupa todo el ancho disponible */
+    height: auto; /* La altura se ajusta al contenido */
+    margin-top: 20px; /* Espaciado superior */
+}
+
+/* Lista de navegación del perfil */
+.navar-profile > ul {
+    width: 100%; /* El contenedor ocupa todo el ancho disponible */
+    display: flex; /* Usa Flexbox para organizar los elementos */
+    flex-direction: column; /* Coloca los elementos en una columna */
+    align-items: center; /* Centra los elementos horizontalmente */
+    justify-content: space-around; /* Distribuye los elementos uniformemente */
+    font-size: 1.5rem; /* Tamaño de fuente para los elementos de la lista */
+    text-transform: uppercase; /* Convierte el texto a mayúsculas */
+}
+
+/* Efecto hover para los enlaces del menú */
+.navar-profile > ul > li > a:hover {
+    text-shadow: -2px -2px 4px var(--second-color); /* Sombra para resaltar el texto al hacer hover */
+    border-bottom: solid 2px #0c0c0a; /* Borde inferior dinámico al hacer hover */
+}
+
+/* Contenedor del footer */
+.left-container > footer {
+    width: 100%; /* El contenedor ocupa todo el ancho disponible */
+    height: auto; /* La altura se ajusta al contenido */
+    display: flex; /* Usa Flexbox para organizar los elementos */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    margin-top: auto; /* Asegura que el footer esté al final del contenedor */
+}
+
+/* Contenedor de redes sociales */
+footer > .navar-social-networks {
+    width: 100%; /* El contenedor ocupa todo el ancho disponible */
+    display: flex; /* Usa Flexbox para organizar los iconos */
+    justify-content: center; /* Centra los iconos horizontalmente */
+    padding-top: 10px; /* Espaciado superior */
+}
+
+/* Lista de redes sociales dentro del contenedor */
+.navar-social-networks > ul {
+    width: 100%; /* El contenedor ocupa todo el ancho disponible */
+    display: grid; /* Usa Grid para organizar los iconos */
+    justify-content: center; /* Centra los iconos horizontalmente */
+    grid-template-columns: repeat(auto-fill, minmax(40px, 1fr)); /* Crea columnas responsivas */
+    gap: 10px; /* Espaciado entre los iconos */
+    list-style-type: none; /* Elimina los puntos de lista predeterminados */
+}
+
+/* Elementos de la lista de redes sociales */
+.navar-social-networks > ul > li {
+    display: flex; /* Usa Flexbox para centrar el icono */
+    list-style: none; /* Elimina los puntos de lista */
+    justify-content: center; /* Centra el icono horizontalmente */
+}
+ .navar-social-networks > li {
+    margin-left: 2%;
+ }
+
+/* Estilos para los iconos de redes sociales */
+.bx {
+    font-size: 2rem; /* Tamaño grande para los iconos */
+    color: var(--third-color); /* Color del icono definido por una variable */
+    border-radius: 50%; /* Bordes redondeados */
+    margin: 0.5rem; /* Espaciado alrededor del icono */
+    background-color: rgb(207, 144, 183); /* Fondo del icono */
+    padding: 10px; /* Espaciado interno para el icono */
+    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out; /* Transición suave para cambios de tamaño y sombra */
+}
+
+/* Efecto hover para los iconos */
+.bx:hover {
+    background: none; /* Elimina el fondo al hacer hover */
+    box-shadow: 0 0 10px var(--first-color); /* Añade una sombra alrededor del icono */
+    transform: scale(1.1); /* Aumenta ligeramente el tamaño del icono al hacer hover */
 }
