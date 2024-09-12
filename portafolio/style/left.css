@@ -27,3 +27,57 @@
     list-style: none;
     padding: 0;
 }
+
+/* Contenedor del footer */
+.left-container > footer {
+    width: 100%; /* El contenedor ocupa todo el ancho disponible */
+    height: auto; /* La altura se ajusta al contenido */
+    display: flex; /* Usa Flexbox para organizar los elementos */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    margin-top: auto; /* Asegura que el footer esté al final del contenedor */
+}
+
+/* Contenedor de redes sociales */
+footer > .navbar-social-networks {
+    width: 100%; /* El contenedor ocupa todo el ancho disponible */
+    display: flex; /* Usa Flexbox para organizar los iconos */
+    justify-content: center; /* Centra los iconos horizontalmente */
+    padding-top: 10px; /* Espaciado superior */
+}
+
+/* Lista de redes sociales dentro del contenedor */
+.navbar-social-networks > ul {
+    width: 100%; /* El contenedor ocupa todo el ancho disponible */
+    display: grid; /* Usa Grid para organizar los iconos */
+    justify-content: center; /* Centra los iconos horizontalmente */
+    grid-template-columns: repeat(auto-fill, minmax(40px, 1fr)); /* Crea columnas responsivas */
+    gap: 10px; /* Espaciado entre los iconos */
+    list-style-type: none; /* Elimina los puntos de lista predeterminados */
+}
+
+/* Elementos de la lista de redes sociales */
+.navbar-social-networks > ul > li {
+    display: flex; /* Usa Flexbox para centrar el icono */
+    list-style: none; /* Elimina los puntos de lista */
+    justify-content: center; /* Centra el icono horizontalmente */
+}
+ .navbar-social-networks > li {
+    margin-left: 2%;
+ }
+
+/* Estilos para los iconos de redes sociales */
+.bx {
+    font-size: 2rem; /* Tamaño grande para los iconos */
+    border-radius: 50%; /* Bordes redondeados */
+    margin: 0.5rem; /* Espaciado alrededor del icono */
+    padding: 10px; /* Espaciado interno para el icono */
+    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out; /* Transición suave para cambios de tamaño y sombra */
+}
+
+/* Efecto hover para los iconos */
+.bx:hover {    
+    background-color: rgb(95, 174, 219); /* Fondo del icono */
+    box-shadow: 0 0 10px var(--first-color); /* Añade una sombra alrededor del icono */
+    transform: scale(1.1); /* Aumenta ligeramente el tamaño del icono al hacer hover */
+}

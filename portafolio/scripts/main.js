@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
       // Agrega más experiencias si es necesario
     ];
   
-    function createCard({ title, img, description }, useProgressBar = false) {
+    function createCard({ title, img, description, progreso }, useProgressBar = false) {
       const card = document.createElement("div");
       card.classList.add("card");
   
@@ -61,15 +61,15 @@ document.addEventListener("DOMContentLoaded", () => {
           <p>${description}</p>
         </div>
       `;
-
-      if (useProgressBar) {
+  
+      if (useProgressBar && progreso !== undefined) {
         card.innerHTML += `
-            <div class="progress-bar">
-                <div class="progress-bar-fill" value="${progreso}" max="100">${progreso}%</div>
-            </div>
+          <div class="progress-bar">
+            <div class="progress-bar-fill" style="width: ${progreso}%;"></div>
+          </div>
         `;
       }
-        const progressBarFill = card.querySelector(".progress-bar-fill");
+  
       return card;
     }
   
@@ -98,5 +98,5 @@ document.addEventListener("DOMContentLoaded", () => {
   
     projects.forEach((project) => projectsContainer.appendChild(createCard(project, true)));
     references.forEach((reference) => referencesContainer.appendChild(createCardExp(reference)));
-    experiences.forEach((experience) => experiencesContainer.appendChild(createCard(experience)));
+    experiences.forEach((experience) => experiencesContainer.appendChild(createCard(experience, false)));
   });
