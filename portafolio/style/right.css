@@ -2,6 +2,15 @@
     margin-bottom: 40px;
 }
 
+h2 {    
+    text-align: left;
+}
+
+h2::selection{
+    text-decoration: underline;
+    text-overflow: clip;
+}
+
 .container-cards {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(305px, 1fr));
@@ -23,12 +32,15 @@
     overflow: hidden;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     position: relative; /* Para posicionar la barra al fondo */
+    text-align: left;
 }
 
 .card img {
     width: 90px;
     height: 90px;
     object-fit: cover;
+    margin-top: 2%;
+    margin-left: 2%;
 }
 
 .card-content {

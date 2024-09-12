@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
+  
     const projects = [
       {
         title: "javascript",
@@ -113,3 +114,21 @@ document.addEventListener("DOMContentLoaded", () => {
     references.forEach((reference) => referencesContainer.appendChild(createCardExp(reference)));
     experiences.forEach((experience) => experiencesContainer.appendChild(createCard(experience, false)));
   });
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const emailLink = document.querySelector('.container-contact-information a[href^="mailto:"]');
+    const whatsappLink = document.querySelector('.container-contact-information a[href^="https://wa.me"]');
+    const mapLink = document.querySelector('.container-contact-information a[href^="https://www.google.com/maps"]');
+
+    emailLink.addEventListener('click', () => {
+        console.log('Correo clickeado: ' + emailLink.href);
+    });
+
+    whatsappLink.addEventListener('click', () => {
+        console.log('WhatsApp clickeado: ' + whatsappLink.href);
+    });
+
+    mapLink.addEventListener('click', () => {
+        console.log('Mapa clickeado: ' + mapLink.href);
+    });
+});
