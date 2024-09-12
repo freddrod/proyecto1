@@ -43,9 +43,22 @@ document.addEventListener("DOMContentLoaded", () => {
   
     const experiences = [
       {
-        title: "Experiencia 1",
-        img: "https://www.ceupe.com/images/easyblog_articles/3934/b2ap3_large_lenguaje-de-programacin.jpg",
-        description: "Descripción de la experiencia.",
+        title: "Diseño y fabricación de muebles a medida",
+        img: "https://t4.ftcdn.net/jpg/01/97/91/84/360_F_197918481_oA3tZwzvHkfJphgN2vO34dTkOujTZBGG.jpg",
+        description: "Diseño y creación de muebles personalizados para clientes particulares y comerciales. Incluye asesoramiento, diseño 3D, y fabricación artesanal.",
+        duration: "1 año"
+      },
+      {
+        title: "Consultoría financiera y contable para autónomos",
+        img: "https://t4.ftcdn.net/jpg/03/10/18/85/360_F_310188505_6b5UmfZbi8wqX6vAfw2WlgSwI5GC4BxG.jpg",
+        description: "Asesoramiento y gestión de cuentas, planificación financiera y presentación de impuestos para trabajadores autónomos.",
+        duration: "8 meses"
+      },
+      {
+        title: "Desarrollo de sitios web para Pymes",
+        img: "https://t4.ftcdn.net/jpg/02/70/69/80/360_F_270698033_YuPrvgnMlgMteJSm68CJh9onLCXf8lC3.jpg",
+        description: "Creación y mantenimiento de sitios web personalizados para pequeñas y medianas empresas. Incluyó optimización SEO, diseño responsivo y gestión de contenido.",
+        duration: "10 meses"
       },
       // Agrega más experiencias si es necesario
     ];
@@ -94,7 +107,7 @@ document.addEventListener("DOMContentLoaded", () => {
   
     const projectsContainer = document.querySelector("#section-projects .container-cards");
     const referencesContainer = document.querySelector("#section-references .container-cards");
-    const experiencesContainer = document.querySelector("#section-experiences .container-cards");
+    const experiencesContainer = document.querySelector("#section-experiences .container-cards-exp");
   
     projects.forEach((project) => projectsContainer.appendChild(createCard(project, true)));
     references.forEach((reference) => referencesContainer.appendChild(createCardExp(reference)));
