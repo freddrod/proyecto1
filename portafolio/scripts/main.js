@@ -1,9 +1,22 @@
 document.addEventListener("DOMContentLoaded", () => {
     const projects = [
       {
-        title: "Chat Bidireccional",
-        img: "https://www.ceupe.com/images/easyblog_articles/3934/b2ap3_large_lenguaje-de-programacin.jpg",
-        description: "Este es un chat con una herramienta socket.io",
+        title: "javascript",
+        img: "https://t4.ftcdn.net/jpg/03/19/57/69/360_F_319576972_faDKjUJxyoOn8rRA4tINl3sQ92XCHlKn.jpg",
+        description: "curso intermedio",
+        progreso: 60,
+      },
+      {
+        title: "HTML5",
+        img: "https://assets.stickpng.com/images/5847f5bdcef1014c0b5e489c.png",
+        description: "curso intermedio",
+        progreso: 70,
+      },
+      {
+        title: "CSS",
+        img: "https://1000logos.net/wp-content/uploads/2020/09/CSS-Logo-500x313.png",
+        description: "curso intermedio",
+        progreso: 40,
       },
       // Agrega más proyectos si es necesario
     ];
@@ -37,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
       // Agrega más experiencias si es necesario
     ];
   
-    function createCard({ title, img, description }) {
+    function createCard({ title, img, description }, useProgressBar = false) {
       const card = document.createElement("div");
       card.classList.add("card");
   
@@ -48,6 +61,15 @@ document.addEventListener("DOMContentLoaded", () => {
           <p>${description}</p>
         </div>
       `;
+
+      if (useProgressBar) {
+        card.innerHTML += `
+            <div class="progress-bar">
+                <div class="progress-bar-fill" value="${progreso}" max="100">${progreso}%</div>
+            </div>
+        `;
+      }
+        const progressBarFill = card.querySelector(".progress-bar-fill");
       return card;
     }
   
@@ -74,8 +96,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const referencesContainer = document.querySelector("#section-references .container-cards");
     const experiencesContainer = document.querySelector("#section-experiences .container-cards");
   
-    projects.forEach((project) => projectsContainer.appendChild(createCard(project)));
+    projects.forEach((project) => projectsContainer.appendChild(createCard(project, true)));
     references.forEach((reference) => referencesContainer.appendChild(createCardExp(reference)));
     experiences.forEach((experience) => experiencesContainer.appendChild(createCard(experience)));
   });
-  
