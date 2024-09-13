@@ -52,7 +52,6 @@ footer > .navbar-social-networks {
     width: 100%; /* El contenedor ocupa todo el ancho disponible */
     display: flex; /* Usa Flexbox para organizar los iconos */
     justify-content: center; /* Centra los iconos horizontalmente */
-    padding-top: 10px; /* Espaciado superior */
 }
 
 /* Lista de redes sociales dentro del contenedor */
@@ -80,7 +79,7 @@ footer > .navbar-social-networks {
     font-size: 2rem; /* Tamaño grande para los iconos */
     border-radius: 50%; /* Bordes redondeados */
     margin: 0.5rem; /* Espaciado alrededor del icono */
-    padding: 10px; /* Espaciado interno para el icono */
+    padding: 5px; /* Espaciado interno para el icono */
     transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out; /* Transición suave para cambios de tamaño y sombra */
 }
 
